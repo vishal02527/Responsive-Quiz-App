@@ -676,7 +676,7 @@ body{
 
   /* Modal Styles */
   .modal {
-    left: 10%;
+    left: 14%;
     top: 32%;
     width: 220px;
   }
@@ -684,5 +684,9 @@ body{
   .modal-content {
     padding: 10px;
     width: 85%;
+    height: 180px;
+  }
+  #closeModal{
+    margin-top: 10px;
   }
 }
