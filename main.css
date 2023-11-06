@@ -545,6 +545,10 @@
     left: 17%;
   }
 
+  .quiz_interface{
+    min-height: 100vh;
+  }
+
   .step_progress {
     margin-top: 20px;
     padding: 0;
@@ -642,7 +646,7 @@
   .scoreSection {
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 10px;
   }
 
   #scoreMessage {
@@ -655,12 +659,19 @@
     font-size: 16px;
     margin: 3% 0% 2% 30%;
   }
+
+  #creatorDiv-quiz_interface {
+    margin: 80px 0px -30px 0px;
+  }
+  #creatorDiv-congratz{
+    margin: 80px 0px -50px 0px;
+  }
   
   #creatorDiv-log_in,
   #creatorDiv-quiz_interface,
   #creatorDiv-congratz p {
     font-size: 12px;
-    margin-top: -8px;
+    margin-top: -10px;
   }
 
   /* Modal Styles */
