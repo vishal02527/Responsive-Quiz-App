@@ -1,6 +1,10 @@
 /*-------------------------------------------------------------------------------------------------------
 -                                       login                                                           -
 -------------------------------------------------------------------------------------------------------*/
+body{
+  margin: 0;
+  padding: 0;
+}
 .log_in {
   height: 75vh;
   background-color: rgba(16, 122, 58, 0.78);
@@ -136,16 +140,17 @@
   margin-top: -10px;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #fff;
-  font-size: 14px;
+  font-size: 12px;
 }
 /*-------------------------------------------------------------------------------------------------------
   -                                       Quiz                                                           -
   -------------------------------------------------------------------------------------------------------*/
 .quiz_interface {
-  min-height: 85vh;
+  min-height: 100vh;
   background-color: #f6f6f6;
   font-family: "Segoe UI", sans-serif;
-  padding: 30px 0px;
+  padding: 20px 0px;
+  box-sizing: border-box;
 }
 
 .logout {
@@ -335,7 +340,10 @@
   transition: all 250ms;
   border: 0;
   font-size: 18px;
-  margin: 1% 0% 0% 80%;
+  margin-left: 80%;
+  margin-right: 0%;
+  margin-top: 1%;
+  margin-bottom: 8%;
 }
 
 .submit:hover {
@@ -349,22 +357,22 @@
 #creatorDiv-quiz_interface {
   display: flex;
   flex-direction: column;
-  align-content: center;
-  align-items: center;
-  margin: 50px 0px -30px 0px;
+  position: relative;
+  text-align: center;
+  top: 10%;
 }
 #creatorDiv-quiz_interface p {
   margin-top: -10px;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #333;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 /*-------------------------------------------------------------------------------------------------------
   -                                       congratz(score)                                                           -
   -------------------------------------------------------------------------------------------------------*/
 #congratz {
-  min-height: 80vh;
+  min-height: 100vh;
   background-color: #f6f6f6;
   font-family: "Segoe UI", sans-serif;
 }
@@ -521,13 +529,13 @@
   flex-direction: column;
   align-content: center;
   align-items: center;
-  margin: 110px 0px -50px 0px;
+  margin: 110px 0px;
 }
 #creatorDiv-congratz p {
   margin-top: -10px;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #333;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 /* Mobile Styles */
@@ -543,10 +551,6 @@
 
   .log_in .login_button {
     left: 17%;
-  }
-
-  .quiz_interface{
-    min-height: 100vh;
   }
 
   .step_progress {
@@ -657,20 +661,21 @@
   .submit {
     padding: 12px 35px;
     font-size: 16px;
-    margin: 3% 0% 2% 30%;
+    margin-left: 30%;
+    margin-right: 0%;
+    margin-top: 3%;
+    margin-bottom: 25%;
   }
 
-  #creatorDiv-quiz_interface {
-    margin: 80px 0px -30px 0px;
-  }
+  
+  
   #creatorDiv-congratz{
-    margin: 80px 0px -50px 0px;
   }
   
   #creatorDiv-log_in,
   #creatorDiv-quiz_interface,
   #creatorDiv-congratz p {
-    font-size: 12px;
+    font-size: 10px;
     margin-top: -10px;
   }
 
