@@ -357,6 +357,12 @@ document.addEventListener("DOMContentLoaded", function () {
     totalTime = 600; // Reset the timer to 10 minutes in seconds
     updateTimerDisplay(); // Update the timer display
 
+    progressBar.style.display = "block";
+    questionDiv.style.display = "block";
+    optionDiv.style.display = "block";
+    submitButton.style.display = "block";
+    creatorBlock.style.display = "block";
+
     // Reset step progress bar
     const progressSteps = document.querySelectorAll(".progress-step");
     progressSteps.forEach((step) => {

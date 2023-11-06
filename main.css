@@ -444,6 +444,8 @@ body{
   font-weight: bold;
   color: #333;
   background-color: #ccc;
+
+  box-sizing: border-box;
   padding: 1rem;
   border-radius: 8px;
 }
