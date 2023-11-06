@@ -132,7 +132,7 @@ body{
 
 #creatorDiv-log_in {
   position: relative;
-  top: 18%;
+  top: 40%;
   text-align: center;
 }
 
@@ -550,7 +550,7 @@ body{
   }
 
   .log_in .login_button {
-    left: 17%;
+    left: 15%;
   }
 
   .step_progress {
@@ -666,11 +666,6 @@ body{
     margin-top: 3%;
     margin-bottom: 25%;
   }
-
-  
-  
-  #creatorDiv-congratz{
-  }
   
   #creatorDiv-log_in,
   #creatorDiv-quiz_interface,
@@ -681,7 +676,7 @@ body{
 
   /* Modal Styles */
   .modal {
-    left: 18%;
+    left: 10%;
     top: 32%;
     width: 280px;
   }
