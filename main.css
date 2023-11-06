@@ -676,9 +676,9 @@ body{
 
   /* Modal Styles */
   .modal {
-    left: 18%;
+    left: 10%;
     top: 32%;
-    width: 280px;
+    width: 220px;
   }
 
   .modal-content {

@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const logoutLink = document.querySelector(".logout");
 
   const timerElement = document.querySelector(".timer");
-  let totalTime = 600; // 10 minutes in seconds
+  let totalTime = 10; // 10 minutes in seconds
   let timerInterval;
 
   document.getElementById("timeUpModal").style.display = "none";
