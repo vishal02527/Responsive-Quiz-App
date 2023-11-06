@@ -5,9 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const usernameInput = document.querySelector(".username");
   const startButton = document.querySelector(".login_button");
   const nameSpan = document.querySelector("#name");
+  const questionDiv = document.querySelector(".question");
   const questionNumberSpan = document.querySelector("#qno");
   const questionTextSpan = document.querySelector("#ques");
   const options = document.querySelectorAll(".option");
+  const optionDiv = document.querySelector(".options");
   const errorMessageBox = document.querySelector("#error_msg");
   const submitButton = document.querySelector("#submit");
   const congratzMsg = document.querySelector("#congratz_msg");
@@ -36,6 +38,12 @@ document.addEventListener("DOMContentLoaded", function () {
         updateTimerDisplay();
       } else {
         clearInterval(timerInterval);
+        // Hide the questions
+        questionDiv.style.display = "none";
+        // Hide the options
+        optionDiv.style.display = "none";
+        // Hide the submit button
+        submitButton.style.display = "none";
         // Show the time-up modal
         document.getElementById("timeUpModal").style.display = "block";
         document.getElementsByClassName("modal").style.display = "block";
