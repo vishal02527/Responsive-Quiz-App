@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const usernameInput = document.querySelector(".username");
   const startButton = document.querySelector(".login_button");
   const nameSpan = document.querySelector("#name");
+  const progressBar = document.querySelector(".step_progress");
   const questionDiv = document.querySelector(".question");
   const questionNumberSpan = document.querySelector("#qno");
   const questionTextSpan = document.querySelector("#ques");
@@ -17,10 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const finalScore = document.querySelector("#final_score");
   const retakeButton = document.querySelector("#retake");
   const exitButton = document.querySelector("#exit");
+  const creatorBlock = document.querySelector("#creatorDiv-quiz_interface");
   const logoutLink = document.querySelector(".logout");
 
   const timerElement = document.querySelector(".timer");
-  let totalTime = 10; // 10 minutes in seconds
+  let totalTime = 600; // 10 minutes in seconds
   let timerInterval;
 
   document.getElementById("timeUpModal").style.display = "none";
@@ -38,12 +40,16 @@ document.addEventListener("DOMContentLoaded", function () {
         updateTimerDisplay();
       } else {
         clearInterval(timerInterval);
+        // Hide the step progress bar
+        progressBar.style.display = "none";
         // Hide the questions
         questionDiv.style.display = "none";
         // Hide the options
         optionDiv.style.display = "none";
         // Hide the submit button
         submitButton.style.display = "none";
+        // Hide the creator block
+        creatorBlock.style.display = "none";
         // Show the time-up modal
         document.getElementById("timeUpModal").style.display = "block";
         document.getElementsByClassName("modal").style.display = "block";
