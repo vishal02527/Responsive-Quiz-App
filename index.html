@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Quiz App</title>
+  </head>
+
+  <body>
+    <!--Login page-->
+    <div class="log_in">
+      <h1>Quiz<br />Mania</h1>
+      <input
+        type="text"
+        class="username"
+        placeholder="Username"
+        name="Username"
+        required
+      />
+      <button class="login_button" type="submit">Take the Quiz</button>
+      <div id="creatorDiv-log_in">
+        <p>&copy; all rights reserved 2023</p>
+        <p>Created by Vishal</p>
+      </div>
+    </div>
+    <!--Quiz page-->
+    <div class="quiz_interface d-none container-fluid">
+      <div id="userData">
+        <span id="name" class="w-100 text-right mt-3 text-right"> </span
+        ><span class="logout mr-3"> Logout </span>
+      </div>
+      <div class="timer-container">
+        <div class="timer">
+          <span id="minutes">10</span>:<span id="seconds">00</span>
+        </div>
+      </div>
+      <div id="timeUpModal" class="modal">
+        <div class="modal-content">
+          <h2>Time's Up!</h2>
+          <p>Sorry, your time is over.</p>
+          <button id="closeModal">OK</button>
+        </div>
+      </div>
+
+      <br />
+      <ul class="step_progress">
+        <li id="qn1" class="progress-step"></li>
+        <li id="qn2" class="progress-step"></li>
+        <li id="qn3" class="progress-step"></li>
+        <li id="qn4" class="progress-step"></li>
+        <li id="qn5" class="progress-step"></li>
+        <li id="qn6" class="progress-step"></li>
+        <li id="qn7" class="progress-step"></li>
+        <li id="qn8" class="progress-step"></li>
+        <li id="qn9" class="progress-step"></li>
+        <li id="qn10" class="progress-step"></li>
+      </ul>
+      <div class="question d-inline">
+        <p>
+          <span id="qno">1.</span>
+          <span id="ques"></span>
+        </p>
+      </div>
+      <div class="options row mx-auto">
+        <div id="op0" class="option col-md-5"></div>
+        <div id="op1" class="option col-md-5"></div>
+        <div id="op2" class="option col-md-5"></div>
+        <div id="op3" class="option col-md-5"></div>
+      </div>
+
+      <p id="error_msg" class="error-message d-none">
+        Please choose an option!!
+      </p>
+
+      <div class="row justify-content-end">
+        <button id="submit" class="submit" type="submit">Submit</button>
+      </div>
+      <div id="creatorDiv-quiz_interface">
+        <p>&copy; all rights reserved 2023</p>
+        <p>Created by Vishal</p>
+      </div>
+    </div>
+    <!--Score page-->
+    <div id="congratz" class="container-fluid d-none">
+      <div class="row w-100 scoreSection">
+        <div class="heading col-lg-6 my-auto">
+          <h1 id="congratz_msg">Congratulation</h1>
+          <h2 id="c_username">Username!!!</h2>
+          <h5 id="retake">Retake</h5>
+          <h5 id="exit">Go to home page</h5>
+        </div>
+        <div class="score jumbotron col-lg-4">
+          <p id="scoreHeading">Final score:</p>
+          <h5 id="final_score"></h5>
+        </div>
+      </div>
+      <div id="creatorDiv-congratz">
+        <p>&copy; all rights reserved 2023</p>
+        <p>Created by Vishal</p>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,684 @@
+/*-------------------------------------------------------------------------------------------------------
+-                                       login                                                           -
+-------------------------------------------------------------------------------------------------------*/
+.log_in {
+  height: 75vh;
+  background-color: rgba(16, 122, 58, 0.78);
+  color: white;
+  padding: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.log_in h1 {
+  font-family: norwester;
+  font-size: 7em;
+  margin-bottom: 60px;
+}
+
+.log_in .username {
+  height: 3em;
+  width: 25em;
+  border-radius: 2em;
+  display: block;
+  border: 0;
+}
+#name {
+  font-size: 20px;
+  font-weight: 500;
+  color: #696969;
+  margin-right: 100px;
+}
+
+.log_in input[type="text"],
+.log_in input[type="password"] {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.log_in input:focus,
+.log_in button:focus {
+  outline-width: 0;
+}
+
+.log_in .login_button {
+  padding: 1em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  background: #ffe77a;
+  cursor: pointer;
+  position: relative;
+  top: 5%;
+  left: 25%;
+  z-index: 0;
+  border-radius: 20px;
+}
+.log_in .login_button::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 20px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.log_in .login_button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 20px;
+}
+
+.navbar-nav {
+  line-height: 40px;
+  -webkit-transform: rotate(11deg);
+  transform: rotate(11deg);
+  position: relative;
+  top: 25em;
+}
+
+.nav-item {
+  font-weight: 700;
+  font-size: 10pt;
+  margin-right: 4em;
+}
+
+.navbar-nav.navbar-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#creatorDiv-log_in {
+  position: relative;
+  top: 18%;
+  text-align: center;
+}
+
+#creatorDiv-log_in p {
+  margin-top: -10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #fff;
+  font-size: 14px;
+}
+/*-------------------------------------------------------------------------------------------------------
+  -                                       Quiz                                                           -
+  -------------------------------------------------------------------------------------------------------*/
+.quiz_interface {
+  min-height: 85vh;
+  background-color: #f6f6f6;
+  font-family: "Segoe UI", sans-serif;
+  padding: 30px 0px;
+}
+
+.logout {
+  text-decoration: underline;
+  color: #cf2929;
+  cursor: pointer;
+}
+
+.step_progress {
+  margin-top: 40px;
+  overflow: hidden;
+  counter-reset: step;
+}
+
+.step_progress li {
+  list-style-type: none;
+  float: left;
+  width: 10%;
+  position: relative;
+}
+
+.step_progress li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 2em;
+  line-height: 2em;
+  display: block;
+  position: relative;
+  font-size: 1.2em;
+  text-align: center;
+  color: #707070;
+  background: white;
+  border-radius: 50%;
+  border: 1px solid #707070;
+  margin: 0 auto 5px auto;
+  z-index: 2;
+}
+
+.step_progress li.correct-step:before {
+  background-color: #107a3a;
+  color: white; 
+  border: none; 
+}
+
+.step_progress li.wrong-step:before {
+  background-color: #cf2929;
+  color: white; 
+  border: none; 
+}
+
+.step_progress li:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #707070;
+  position: absolute;
+  left: 50%;
+  top: 1em;
+  z-index: 1;
+}
+
+.step_progress li.correct-step:after {
+  background: #107a3a;
+}
+.step_progress li.wrong-step:after {
+  background: #cf2929;
+}
+
+.step_progress li:last-child:after {
+  content: none;
+}
+
+.step_progress li.active:before {
+  background: #d4c605;
+  color: white;
+  border: none;
+}
+
+.step_progress li.right:before,
+.step_progress li.right:after {
+  background: #107a3a;
+  color: white;
+  border: none;
+}
+
+.step_progress li.wrong:before,
+.step_progress li.wrong:after {
+  background: #cf2929;
+  color: white;
+  border: none;
+}
+#qno {
+  font-weight: 600;
+  color: #0000cd;
+}
+#ques {
+  color: #0000cd;
+  font-weight: 500;
+}
+.question {
+  padding: 0 10px;
+}
+
+.question p {
+  margin-top: 3em;
+  text-align: center;
+  font-size: 1.1em;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.options {
+  width: 100%;
+  margin-top: 3em;
+  margin-left: 250px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.options .option {
+  width: 30%;
+  border-radius: 2em;
+  height: 3.5em;
+  padding-left: 1.75em;
+  margin-right: 2em;
+  margin-bottom: 1em;
+  text-transform: capitalize;
+  background-color: whitesmoke;
+  -webkit-box-shadow: #707070 1px 2px 3px;
+  box-shadow: #707070 1px 2px 3px;
+  font-family: "Segoe UI", sans-serif;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.option:hover {
+  background-color: #ececec;
+  -webkit-box-shadow: #707070 5px 5px 5px;
+  box-shadow: #707070 5px 5px 5px;
+}
+
+.options .correct {
+  border: none;
+  background-color: #107a3a;
+  color: white;
+  -webkit-box-shadow: black 1px 2px 3px;
+  box-shadow: black 1px 2px 3px;
+}
+
+.options .wrong {
+  border: none;
+  background-color: #cf2929;
+  color: white;
+  -webkit-box-shadow: #4f1010 1px 2px 3px;
+  box-shadow: #4f1010 1px 2px 3px;
+}
+
+.options .selected {
+  border: none;
+  background-color: #d4c605;
+  color: white;
+  -webkit-box-shadow: black 1px 2px 3px;
+  box-shadow: black 1px 2px 3px;
+}
+
+#error_msg {
+  margin-top: 5px;
+  margin-left: 45%;
+  color: #cf2929;
+}
+
+.submit {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px,
+    rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
+    rgba(44, 187, 99, 0.15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  padding: 16px 48px;
+  transition: all 250ms;
+  border: 0;
+  font-size: 18px;
+  margin: 1% 0% 0% 80%;
+}
+
+.submit:hover {
+  box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px,
+    rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
+    rgba(44, 187, 99, 0.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+#creatorDiv-quiz_interface {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  margin: 50px 0px -30px 0px;
+}
+#creatorDiv-quiz_interface p {
+  margin-top: -10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #333;
+  font-size: 14px;
+}
+
+/*-------------------------------------------------------------------------------------------------------
+  -                                       congratz(score)                                                           -
+  -------------------------------------------------------------------------------------------------------*/
+#congratz {
+  min-height: 80vh;
+  background-color: #f6f6f6;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.heading h1 {
+  font-size: 4em;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+.heading h2 {
+  margin-top: 10px;
+  font-size: 3em;
+  color: #007bff;
+}
+
+.heading h5 {
+  margin-top: 5%;
+  cursor: pointer;
+}
+
+.heading #retake {
+  color: #107a3a;
+  font-size: 16px;
+}
+
+.heading #exit {
+  color: #cf2929;
+  font-size: 16px;
+  margin-left: 100px;
+}
+
+.score {
+  background-color: #e9ecef;
+  border: 1px solid #ddd;
+  box-shadow: 0px 3px 10px #ccc;
+  text-align: center;
+  width: 30%;
+  height: 300px;
+  padding: 50px 0;
+}
+#retake,
+#exit {
+  display: inline-block;
+}
+
+.score h5 {
+  font-size: 2em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #05549f;
+}
+.score #scoreHeading {
+  font-size: 3em;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+/* Style for the timer container */
+.timer-container {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 45%;
+}
+
+/* Style for the timer display */
+.timer {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  background-color: #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Style for minutes and seconds */
+.timer span {
+  margin: 0 0.25rem;
+  background-color: #333;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  left: 38.5%;
+  top: 32%;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  width: 80%;
+  height: 200px;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  border: 1.5px solid rgba(0, 168, 255, 0.4);
+  box-shadow: 0 2px 5px rgb(0 0 0/25%);
+}
+
+/* Close button style */
+#closeModal {
+  background-color: #b22222;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 22px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#closeModal:hover {
+  background-color: #8b0000;
+}
+
+#userData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#error_msg {
+  margin-top: 5px;
+  margin-left: 45%;
+  color: #cf2929;
+}
+
+.scoreSection {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 150px;
+}
+
+#scoreMessage {
+  color: #ff7300;
+  font-size: 22px;
+  display: inline-block;
+  background-color: #fff;
+  padding: 15px 30px;
+  border-radius: 20px;
+}
+
+#creatorDiv-congratz {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  margin: 110px 0px -50px 0px;
+}
+#creatorDiv-congratz p {
+  margin-top: -10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .log_in h1 {
+    font-size: 4em;
+  }
+
+  .log_in .username {
+    width: 100%;
+    max-width: 100%;
+    margin-left: -25px;
+  }
+
+  .log_in .login_button {
+    left: 20%;
+  }
+
+  .step_progress {
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  .step_progress li {
+    width: 10%;
+  }
+
+  .step_progress li:before {
+    font-size: 1em;
+    width: 1.5em;
+    line-height: 1.5em;
+  }
+  .step_progress li:after {
+    top: 0.8em;
+  }
+  #name {
+    margin-right: 0;
+    font-size: 16px;
+  }
+  #userData {
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .logout {
+    font-size: 14px;
+  }
+  .question p {
+    font-size: 1em;
+  }
+
+  .timer-container {
+    margin-top: 30px;
+    margin-left: 34%;
+  }
+
+  .timer {
+    font-size: 1.1rem;
+    padding: 0.8rem;
+  }
+
+  .timer span {
+    margin: 0 0.25rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+  }
+
+  #error_msg {
+    margin-left: 25%;
+  }
+
+  .options {
+    margin-left: 15px;
+    display: block;
+    padding: 0 10px;
+    width: 80%;
+  }
+
+  .options .option {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .score {
+    margin-top: 20px;
+    width: 85%;
+    height: auto;
+  }
+
+  .heading h1 {
+    font-size: 2em;
+  }
+
+  .heading h2 {
+    font-size: 1.5em;
+  }
+
+  .heading h5 {
+    font-size: 14px !important;
+  }
+  .score h5 {
+    font-size: 1.5em;
+  }
+
+  .score #scoreHeading {
+    font-size: 2em;
+  }
+  .heading {
+    margin-left: -60px;
+  }
+
+  .scoreSection {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+  }
+
+  #scoreMessage {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .submit {
+    padding: 12px 40px;
+    font-size: 16px;
+    margin: 3% 0% 2% 30%;
+  }
+
+  #creatorDiv-log_in,
+  #creatorDiv-quiz_interface,
+  #creatorDiv-congratz p {
+    font-size: 12px;
+  }
+
+  /* Modal Styles */
+  .modal {
+    left: 18%;
+    top: 32%;
+    width: 280px;
+  }
+
+  .modal-content {
+    padding: 10px;
+    width: 85%;
+  }
+}
+
+/* Tablet Styles */
+@media (max-width: 992px) {
+  .log_in h1 {
+    font-size: 5em;
+  }
+}
