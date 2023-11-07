@@ -616,7 +616,7 @@ body{
   }
   .options-responsive{
     display: block;
-    margin-left: 40px;
+    width: 95%;
   }
 
   .options .option {
