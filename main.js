@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const logoutLink = document.querySelector(".logout");
 
   const timerElement = document.querySelector(".timer");
-  let totalTime = 600; // 10 minutes in seconds
+  let totalTime = 10; // 10 minutes in seconds
   let timerInterval;
 
   document.getElementById("timeUpModal").style.display = "none";
@@ -354,12 +354,12 @@ document.addEventListener("DOMContentLoaded", function () {
     score = 0;
     // Clear the previous interval, if any
     clearInterval(timerInterval);
-    totalTime = 600; // Reset the timer to 10 minutes in seconds
+    totalTime = 10; // Reset the timer to 10 minutes in seconds
     updateTimerDisplay(); // Update the timer display
 
     progressBar.style.display = "block";
     questionDiv.style.display = "block";
-    optionDiv.style.display = "block";
+    optionDiv.style.display = "flex";
     submitButton.style.display = "block";
     creatorBlock.style.display = "block";
 
