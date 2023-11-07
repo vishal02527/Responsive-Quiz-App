@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const logoutLink = document.querySelector(".logout");
 
   const timerElement = document.querySelector(".timer");
-  let totalTime = 10; // 10 minutes in seconds
+  let totalTime = 600; // 10 minutes in seconds
   let timerInterval;
 
   document.getElementById("timeUpModal").style.display = "none";
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Clear the previous interval, if any
     clearInterval(timerInterval);
-    totalTime = 602; // Reset the timer to 10 minutes in seconds(because 2 sec difference after logout)
+    totalTime = 603; // Reset the timer to 10 minutes in seconds(because 3 sec difference after logout)
     updateTimerDisplay(); // Update the timer display
 
     // Reset step progress bar
@@ -354,7 +354,7 @@ document.addEventListener("DOMContentLoaded", function () {
     score = 0;
     // Clear the previous interval, if any
     clearInterval(timerInterval);
-    totalTime = 10; // Reset the timer to 10 minutes in seconds
+    totalTime = 600; // Reset the timer to 10 minutes in seconds
     updateTimerDisplay(); // Update the timer display
 
     progressBar.style.display = "block";
