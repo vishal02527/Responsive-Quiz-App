@@ -609,10 +609,14 @@ body{
   }
 
   .options {
-    margin-left: 20px;
+    margin-left: 10px;
     display: block;
     padding: 0 10px;
     width: 80%;
+  }
+  .options-responsive{
+    display: block;
+    margin-left: 40px;
   }
 
   .options .option {

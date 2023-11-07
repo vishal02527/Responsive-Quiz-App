@@ -360,6 +360,7 @@ document.addEventListener("DOMContentLoaded", function () {
     progressBar.style.display = "block";
     questionDiv.style.display = "block";
     optionDiv.style.display = "flex";
+    optionDiv.classList.add("options-responsive");
     submitButton.style.display = "block";
     creatorBlock.style.display = "block";
 
@@ -405,6 +406,7 @@ document.addEventListener("DOMContentLoaded", function () {
     progressBar.style.display = "block";
     questionDiv.style.display = "block";
     optionDiv.style.display = "flex";
+    optionDiv.classList.add("options-responsive");
     submitButton.style.display = "block";
     creatorBlock.style.display = "block";
 
