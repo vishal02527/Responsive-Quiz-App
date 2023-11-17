@@ -371,7 +371,7 @@ body{
   -                                       congratz(score)                                                           -
   -------------------------------------------------------------------------------------------------------*/
 #congratz {
-  min-height: 100vh;
+  min-height: 90vh;
   background-color: #f6f6f6;
   font-family: "Segoe UI", sans-serif;
 }
@@ -674,7 +674,7 @@ body{
 
   #creatorDiv-congratz{
     max-width: 220px;
-    margin: 150px 0px 10px 50px;
+    margin: 150px 0px 10px 60px;
   }
   
   #creatorDiv-log_in,
