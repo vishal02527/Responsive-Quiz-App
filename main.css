@@ -351,7 +351,6 @@ body{
     rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px,
     rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
     rgba(44, 187, 99, 0.25) 0 16px 32px;
-  transform: scale(1.05) rotate(-1deg);
 }
 
 #creatorDiv-quiz_interface {
@@ -667,10 +666,15 @@ body{
   .submit {
     padding: 12px 35px;
     font-size: 16px;
-    margin-left: 30%;
+    margin-left: 32%;
     margin-right: 0%;
     margin-top: 3%;
     margin-bottom: 25%;
+  }
+
+  #creatorDiv-congratz{
+    max-width: 220px;
+    margin-left: 50px;
   }
   
   #creatorDiv-log_in,
