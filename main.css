@@ -674,7 +674,7 @@ body{
 
   #creatorDiv-congratz{
     max-width: 220px;
-    margin-left: 50px;
+    margin: 150px 0px 10px 50px;
   }
   
   #creatorDiv-log_in,
